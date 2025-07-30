@@ -1,0 +1,9 @@
+# Virtual Enviroment
+venv/
+
+# Data folder
+data/
+
+# File types
+*.pdf
+.xlsx
