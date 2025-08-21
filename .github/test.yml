@@ -1,0 +1,41 @@
+name: Test PDF Data Extract to Excel
+
+# on - speficifies the events that run/trigger the workflow
+on:
+  push:
+    branches:
+      - main
+
+# jobs: difines the tasks to be defined in the workflow
+jobs:
+  build:
+    # Specifies the type of machine the jobs will run
+    runs-on: windows-latest
+    # Defines individual tasks within a job
+    steps:
+      # name CAN HAVE ANY NAME
+      - name: Checkout code
+        # uses - is used to run any COMMAND or EXTERNAL TOOL from the local IDE
+        # AND is the first action which downloads the code from the repo to the GitHub virtual machine (runner).
+        # v4 - is the last update of the GitHub has available the action checkout 
+        uses: actions/checkout@v4
+
+      # Makes the GitHub virtual machine (runner) downloads and set up the python version
+      # to the GitHub workflow environment.
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          # Python version of the project
+          python-version: '3.12'
+      
+
+      # run MUST HAVE machine commands (if ubuntu or windows)
+      # Install dependencies (same as when installing external libraries to the local IDE)
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run notebook
+        run: jupyter nbconvert --to notebook --execute notebook\body_code_list_clean.ipynb --output notebook\body_code_list_clean.ipynb
+
+
+      
