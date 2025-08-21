@@ -35,7 +35,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run notebook
-        run: jupyter nbconvert --to notebook --execute notebook\body_code_list_clean.ipynb --output notebook\body_code_list_clean.ipynb
+        run: jupyter nbconvert --to notebook --execute notebook\pdf_extract.ipynb --output notebook\pdf_extract.ipynb
 
 
       
