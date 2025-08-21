@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     # Specifies the type of machine the jobs will run
-    runs-on: windows-latest
+    runs-on: Windows-2022
     # Defines individual tasks within a job
     steps:
       # name CAN HAVE ANY NAME
