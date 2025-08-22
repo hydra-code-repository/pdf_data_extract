@@ -34,12 +34,14 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       
+      - name: Download PDF file
+        run: |
+          mkdir -p data
+          curl -L -o data/pdf.pdf https://github.com/hydra-code-repository/pdf_data_extract_to_excel/raw/main/data/pdf.pdf
+
       # step to list all files the data folder contains and make sure the .pdf file is present
       - name: List files from folder data
         run: dir data
 
       - name: Run notebook
-        run: jupyter nbconvert --to notebook --execute notebook/pdf_extract.ipynb --output notebook/pdf_extract.ipynb
-
-
-      
+        run: jupyter nbconvert --to notebook --execute notebook/pdf_extract.ipynb --output notebook/pdf_extract.ipynb      
