@@ -49,5 +49,9 @@ jobs:
       - name: List files from folder data
         run: dir data
 
+      # Show the current directory
+      - name: Show current directory
+        run: pwd
+
       - name: Run notebook
         run: jupyter nbconvert --to notebook --execute notebook/pdf_extract.ipynb --output notebook/pdf_extract.ipynb      
