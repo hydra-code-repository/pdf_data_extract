@@ -43,7 +43,7 @@ jobs:
         # If condition check if the folder data exists, if not create the folder "data"
         run: |
           if (!(Test-Path -Path "data")) {New-Item -ItemType Directory -Path "data"}
-          curl -L -o data/pdf.pdf https://github.com/hydra-code-repository/pdf_data_extract_to_excel/raw/main/data/part_number_chart.pdf
+          curl -L -o data/part_number_chart.pdf https://github.com/hydra-code-repository/pdf_data_extract_to_excel/raw/main/data/part_number_chart.pdf
 
       # step to list all files the data folder contains and make sure the .pdf file is present
       - name: List files from folder data
