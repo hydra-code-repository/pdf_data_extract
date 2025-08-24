@@ -35,8 +35,14 @@ jobs:
         run: pip install -r requirements.txt
       
       - name: Download PDF file
+        # run: | - used when multiple steps are needed:
+        # run: |
+        #  command_1
+        #  command_2
+        # By default (only 1 command) should be: run: command_1
+        # If condition check if the folder data exists, if not create the folder "data"
         run: |
-          mkdir -p data
+          if (!(Test-Path -Path "data")) {New-Item -ItemType Directory -Path "data"}
           curl -L -o data/pdf.pdf https://github.com/hydra-code-repository/pdf_data_extract_to_excel/raw/main/data/pdf.pdf
 
       # step to list all files the data folder contains and make sure the .pdf file is present
