@@ -2,8 +2,8 @@
 venv/
 
 # Data folder
-# data/
+data/
 
 # File types
-# *.pdf
-# .xlsx
+*.pdf
+.xlsx
