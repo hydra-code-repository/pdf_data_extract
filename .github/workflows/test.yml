@@ -54,4 +54,4 @@ jobs:
         run: pwd
 
       - name: Run notebook
-        run: jupyter nbconvert --to notebook --execute notebook/pdf_extract.ipynb --output notebook/pdf_extract.ipynb      
+        run: jupyter nbconvert --to notebook --execute --inplace notebook/pdf_extract.ipynb      
