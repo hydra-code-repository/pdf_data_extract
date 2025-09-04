@@ -1,5 +1,5 @@
 # Virtual Environment
-venv/
+# venv/
 
 # Data directory
-# data/
+data/
