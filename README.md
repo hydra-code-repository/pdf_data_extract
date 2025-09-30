@@ -75,11 +75,10 @@ jupyter notebook
    - Formats text (removes line breaks)
 5. **Excel Export** - Saves processed data to Excel file
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## Author
+Developed by [Weverson Barbieri de Oliveira](https://github.com/weversonbarbieri)  
+E-mail: weverson.b@mintt.com 
 
-Developed by [Weverson Barbieri](https://github.com/weversonbarbier)
+## License
+MIT
 
